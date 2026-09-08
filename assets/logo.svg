@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- AFTERDARK mark : python snake curve locked in a square frame -->
+  <rect x="1.5" y="1.5" width="21" height="21" fill="none" stroke="#a78bfa" stroke-width="2"/>
+  <path d="M7 16.5 C 12.8 16.5, 11.2 7.5, 17 7.5" fill="none" stroke="#a78bfa" stroke-width="2.4" stroke-linecap="square"/>
+  <rect x="4.9" y="14.8" width="3.4" height="3.4" fill="#a78bfa"/>
+  <rect x="15.7" y="5.8" width="3.4" height="3.4" fill="#a78bfa"/>
+</svg>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFTERDARK — The open source Python learning platform for vibe coders</title>
+  <meta name="description" content="AFTERDARK is a free, open source platform to learn Python from zero to professional level. Built for vibe coders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Fixed side rails : pure black gutters -->
+  <div class="rail rail-left" aria-hidden="true"><span>CONQUER</span></div>
+  <div class="rail rail-right" aria-hidden="true"><span>AFTERDARK</span></div>
+
+  <div class="page">
+
+    <!-- Announcement bar -->
+    <div class="announce">
+      <span class="announce-tag">NEW</span>
+      <p>AFTERDARK 1.0 is live — Python tracks from zero to pro. <a href="#features">Start learning now</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+      <a class="nav-logo" href="#top"><img src="assets/logo.svg" alt="AFTERDARK logo" class="logo-mark">AFTERDARK</a>
+      <nav class="nav-links">
+        <a href="#features">Learn</a>
+        <a href="#what">Docs</a>
+        <a href="#stats">Community</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-solid" href="#install">Start Free</a>
+      </div>
+      <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </header>
+
+    <main id="top">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Open source · Free forever · No signup required
+        </div>
+        <h1>The open source Python<br>learning platform for <span class="accent">vibe coders</span></h1>
+        <p class="hero-sub">Go from zero to professional Python developer with structured tracks,
+        real projects and an interactive playground. 100% free, 100% open source.</p>
+
+        <!-- Install block -->
+        <div class="install" id="install">
+          <div class="install-tabs" role="tablist">
+            <button class="tab active" data-tab="pip" role="tab">pip</button>
+            <button class="tab" data-tab="uv" role="tab">uv</button>
+            <button class="tab" data-tab="git" role="tab">git clone</button>
+          </div>
+          <div class="install-cmd">
+            <code id="cmd-pip" class="cmd active">pip install afterdark</code>
+            <code id="cmd-uv" class="cmd">uv add afterdark</code>
+            <code id="cmd-git" class="cmd">git clone https://github.com/afterdark/learn-python</code>
+            <button class="copy-btn" id="copyBtn" aria-label="Copy command">Copy</button>
+          </div>
+        </div>
+
+        <!-- Terminal preview -->
+        <div class="terminal" aria-label="Terminal preview">
+          <div class="terminal-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="terminal-title">afterdark — session</span>
+          </div>
+          <div class="terminal-body" id="terminalBody"></div>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn btn-solid btn-lg" href="#features">Start Learning</a>
+          <a class="btn btn-outline btn-lg" href="#what">Read the Docs</a>
+        </div>
+      </section>
+
+      <!-- What is AFTERDARK -->
+      <section class="what" id="what">
+        <h2>What is AFTERDARK?</h2>
+        <p class="what-sub">AFTERDARK is an open source learning platform that teaches you Python —
+        from your first <code>print()</code> to shipping professional software.</p>
+
+        <div class="blocks" id="features">
+          <div class="block">
+            <div class="block-marker">[*]</div>
+            <h3>Zero to Pro Path</h3>
+            <p>Structured tracks take you from syntax basics to professional architecture — no gaps, no fluff.</p>
+          </div>
+          <div class="block">
+            <div class="block-marker">[*]</div>
+            <h3>Interactive Playground</h3>
+            <p>Run real Python in your browser. Every lesson is executable, editable and instantly verified.</p>
+          </div>
+          <div class="block">
+            <div class="block-marker">[*]</div>
+            <h3>Real Projects</h3>
+            <p>Build CLIs, APIs, automations and data tools. Ship portfolio-grade projects, not just exercises.</p>
+          </div>
+          <div class="block">
+            <div class="block-marker">[*]</div>
+            <h3>Vibe Coder Ready</h3>
+            <p>Designed for the AI-assisted era — learn to read, direct and review code like a professional.</p>
+          </div>
+          <div class="block">
+            <div class="block-marker">[*]</div>
+            <h3>Any OS, Any Editor</h3>
+            <p>Works in the terminal, the browser and your favorite IDE. Windows, macOS and Linux.</p>
+          </div>
+          <div class="block">
+            <div class="block-marker">[*]</div>
+            <h3>Community Driven</h3>
+            <p>Open source lessons, open roadmap. Contribute exercises, tracks and fixes on GitHub.</p>
+          </div>
+        </div>
+
+        <div class="what-cta">
+          <a class="btn btn-outline" href="#faq">Browse the curriculum</a>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="stats" id="stats">
+        <h2>Learn in the dark. Ship in the light.</h2>
+        <p class="stats-sub">With hundreds of lessons, dozens of projects and a growing community,
+        AFTERDARK is trusted by vibe coders around the world.</p>
+        <div class="figures">
+          <div class="figure">
+            <span class="fig-label">Fig 1.</span>
+            <span class="fig-num" data-count="500">0</span>
+            <span class="fig-cap">Interactive lessons</span>
+          </div>
+          <div class="figure">
+            <span class="fig-label">Fig 2.</span>
+            <span class="fig-num" data-count="40">0</span>
+            <span class="fig-cap">Real-world projects</span>
+          </div>
+          <div class="figure">
+            <span class="fig-label">Fig 3.</span>
+            <span class="fig-num" data-count="12" data-suffix="K">0</span>
+            <span class="fig-cap">Learners and counting</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q">What is AFTERDARK?<span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>AFTERDARK is a free, open source platform for learning Python —
+            from absolute beginner to professional developer, with an emphasis on the AI-assisted "vibe coding" workflow.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">How do I start learning?<span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>Run <code>pip install afterdark</code> or open the browser playground.
+            The zero-to-pro track begins with variables, loops and functions — no setup required.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Do I need any experience?<span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>None. Track 0 assumes you have never written a line of code.
+            If you already know the basics, you can skip ahead with placement checks.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Can I use AI tools while learning?<span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>Yes — that's the point. AFTERDARK teaches you to use AI assistants
+            professionally: how to prompt, verify, refactor and take responsibility for the code you ship.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">How much does it cost?<span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>Nothing. Every lesson, project and tool is free and open source under the MIT license. Forever.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">What about my data and privacy?<span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>AFTERDARK stores nothing about you. Lessons run locally or in your browser,
+            and the platform requires no account, email or tracking.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <h2>Be first to know when new tracks drop</h2>
+        <p>Join the waitlist for early access to advanced professional tracks.</p>
+        <form class="subscribe" id="subscribeForm" onsubmit="return false;">
+          <input type="email" id="subscribeEmail" placeholder="you@example.com" aria-label="Email address" required>
+          <button class="btn btn-solid" type="submit" id="subscribeBtn">Subscribe</button>
+        </form>
+        <p class="subscribe-msg" id="subscribeMsg"></p>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo"><img src="assets/logo.svg" alt="AFTERDARK logo" class="logo-mark">AFTERDARK</span>
+          <p>Learn Python after dark. Ship before sunrise.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="#features">Zero to Pro</a>
+          <a href="#what">Playground</a>
+          <a href="#stats">Projects</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" rel="noopener">Discord</a>
+          <a href="#" rel="noopener">X / Twitter</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">License (MIT)</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>©2026 AFTERDARK · Open source under MIT</span>
+        <span class="footer-right">CONQUER&nbsp;/&nbsp;AFTERDARK</span>
+      </div>
+    </footer>
+
+  </div><!-- /.page -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
