@@ -156,7 +156,7 @@
 
   /* ---------- Start Free portal (magical popup) ---------- */
   const startFreeBtn = document.getElementById('startFreeBtn');
-  const startLearningBtn = document.getElementById('startLearningBtn');
+  const specialProgramsBtn = document.getElementById('specialProgramsBtn');
   const portalScrim = document.getElementById('portalScrim');
   const portalClose = document.getElementById('portalClose');
   const SPARKS = ['✦', '✧', '★', '✶', '✵', '✴'];
@@ -200,9 +200,9 @@
     if (startFreeBtn) startFreeBtn.focus({ preventScroll: true });
   }
 
-  if (portalScrim && portalClose && (startFreeBtn || startLearningBtn)) {
+  if (portalScrim && portalClose && (startFreeBtn || specialProgramsBtn)) {
     if (startFreeBtn) startFreeBtn.addEventListener('click', openPortal);
-    if (startLearningBtn) startLearningBtn.addEventListener('click', openPortal);
+    if (specialProgramsBtn) specialProgramsBtn.addEventListener('click', openPortal);
     portalClose.addEventListener('click', closePortal);
     portalScrim.addEventListener('click', function (e) {
       if (e.target === portalScrim) closePortal();
