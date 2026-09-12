@@ -40,6 +40,31 @@
     });
   }
 
+  /* ---------- After-clone step copy buttons ---------- */
+  document.querySelectorAll('.copy-step').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const row = btn.closest('.step-cmd-row');
+      const cmd = row ? row.querySelector('.step-cmd') : null;
+      if (!cmd) return;
+      const text = cmd.textContent.trim();
+      function done() {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1400);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(done);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        done();
+      }
+    });
+  });
+
   /* ---------- Terminal typing animation ---------- */
   const termBody = document.getElementById('terminalBody');
   if (termBody) {

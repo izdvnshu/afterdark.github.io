@@ -71,6 +71,45 @@
           <div class="terminal-body" id="terminalBody"></div>
         </div>
 
+        <!-- After clone — run it locally -->
+        <div class="clone-steps" aria-label="How to run the site after cloning">
+          <div class="clone-steps-bar">after git clone — use the website locally</div>
+          <div class="clone-step">
+            <span class="step-num">01</span>
+            <div class="step-main">
+              <span class="step-label">get the code</span>
+              <div class="step-cmd-row">
+                <code class="step-cmd">git clone https://github.com/izdvnshu/devshadows.github.io.git</code>
+                <button class="copy-step" type="button">Copy</button>
+              </div>
+            </div>
+          </div>
+          <div class="clone-step">
+            <span class="step-num">02</span>
+            <div class="step-main">
+              <span class="step-label">enter the folder</span>
+              <div class="step-cmd-row">
+                <code class="step-cmd">cd devshadows.github.io</code>
+                <button class="copy-step" type="button">Copy</button>
+              </div>
+            </div>
+          </div>
+          <div class="clone-step">
+            <span class="step-num">03</span>
+            <div class="step-main">
+              <span class="step-label">open the site</span>
+              <div class="step-cmd-row">
+                <code class="step-cmd">start index.html</code>
+                <button class="copy-step" type="button">Copy</button>
+              </div>
+            </div>
+          </div>
+          <p class="clone-steps-note">zero setup, no build — the full course runs in your browser, even offline.
+          on mac/linux use <code>open index.html</code>. want a local server? run
+          <code>python -m http.server 8080</code> and open <code>http://localhost:8080</code>.
+          progress saves on your device and survives updates via <code>git pull</code>.</p>
+        </div>
+
         <div class="hero-cta">
           <button type="button" class="btn btn-solid btn-lg" id="specialProgramsBtn" aria-haspopup="dialog">SPECIAL PROGRAMS</button>
         </div>
