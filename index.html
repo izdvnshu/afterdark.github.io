@@ -36,7 +36,7 @@
       </nav>
       <div class="nav-actions">
         <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-solid" href="#install">Start Free</a>
+        <button type="button" class="btn btn-solid" id="startFreeBtn" aria-haspopup="dialog">Start Free</button>
       </div>
       <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </header>
@@ -234,6 +234,43 @@
     </footer>
 
   </div><!-- /.page -->
+
+  <!-- ══════════ START FREE PORTAL (magical popup) ══════════ -->
+  <div class="portal-scrim" id="portalScrim" aria-hidden="true">
+    <div class="portal-stage">
+      <div class="portal-glow" aria-hidden="true"></div>
+      <div class="portal-burst" aria-hidden="true"></div>
+      <div class="portal-wrap">
+        <div class="portal" role="dialog" aria-modal="true" aria-labelledby="portalTitle">
+          <button class="portal-close" id="portalClose" type="button" aria-label="Close popup">✕</button>
+          <div class="portal-head">
+            <span class="portal-eyebrow">✦ choose your junction ✦</span>
+            <h3 id="portalTitle">Start free on…</h3>
+            <p class="portal-sub">two worlds, one destination — zero to pro. pick yours.</p>
+          </div>
+          <div class="portal-options">
+            <a class="portal-option" href="https://devshadows.github.io" target="_blank" rel="noopener">
+              <span class="portal-glyph">01</span>
+              <span class="portal-info">
+                <span class="portal-name">DEVSHADOWS</span>
+                <span class="portal-desc">learn python, all the way down</span>
+              </span>
+              <span class="portal-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="portal-option" href="https://zenthon.github.io" target="_blank" rel="noopener">
+              <span class="portal-glyph">02</span>
+              <span class="portal-info">
+                <span class="portal-name">ZENTHON</span>
+                <span class="portal-desc">the professional way to learn python</span>
+              </span>
+              <span class="portal-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <span class="portal-shimmer" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

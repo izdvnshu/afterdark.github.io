@@ -153,4 +153,66 @@
       a.addEventListener('click', function () { nav.classList.remove('open'); });
     });
   }
+
+  /* ---------- Start Free portal (magical popup) ---------- */
+  const startFreeBtn = document.getElementById('startFreeBtn');
+  const portalScrim = document.getElementById('portalScrim');
+  const portalClose = document.getElementById('portalClose');
+  const SPARKS = ['✦', '✧', '★', '✶', '✵', '✴'];
+
+  function spawnSparks(host, count) {
+    if (!host) return;
+    for (let i = 0; i < count; i++) {
+      const s = document.createElement('span');
+      s.className = 'spark';
+      s.textContent = SPARKS[(Math.random() * SPARKS.length) | 0];
+      s.style.left = (8 + Math.random() * 84).toFixed(1) + '%';
+      s.style.top = (6 + Math.random() * 88).toFixed(1) + '%';
+      s.style.setProperty('--dx', ((Math.random() - 0.5) * 240).toFixed(0) + 'px');
+      s.style.setProperty('--dy', ((Math.random() - 0.5) * 240).toFixed(0) + 'px');
+      s.style.setProperty('--dur', (650 + Math.random() * 950).toFixed(0) + 'ms');
+      s.style.setProperty('--scale', (0.5 + Math.random() * 1.2).toFixed(2));
+      s.style.fontSize = (9 + Math.random() * 11).toFixed(0) + 'px';
+      s.style.color = Math.random() > 0.55 ? 'var(--accent)' : '#ffffff';
+      s.style.animationDelay = (Math.random() * 180).toFixed(0) + 'ms';
+      host.appendChild(s);
+      s.addEventListener('animationend', function () { s.remove(); });
+    }
+  }
+
+  function openPortal() {
+    if (!portalScrim || portalScrim.classList.contains('open')) return;
+    portalScrim.classList.add('open');
+    portalScrim.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('portal-locked');
+    spawnSparks(portalScrim.querySelector('.portal-stage'), 24);
+    const first = portalScrim.querySelector('.portal-option');
+    if (first) first.focus({ preventScroll: true });
+  }
+
+  function closePortal() {
+    if (!portalScrim) return;
+    portalScrim.classList.remove('open');
+    portalScrim.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('portal-locked');
+    portalScrim.querySelectorAll('.spark').forEach(function (s) { s.remove(); });
+    if (startFreeBtn) startFreeBtn.focus({ preventScroll: true });
+  }
+
+  if (startFreeBtn && portalScrim && portalClose) {
+    startFreeBtn.addEventListener('click', openPortal);
+    portalClose.addEventListener('click', closePortal);
+    portalScrim.addEventListener('click', function (e) {
+      if (e.target === portalScrim) closePortal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && portalScrim.classList.contains('open')) closePortal();
+    });
+    /* a small sprinkle of sparks when hovering an option */
+    document.querySelectorAll('.portal-option').forEach(function (opt) {
+      opt.addEventListener('mouseenter', function () {
+        if (portalScrim.classList.contains('open')) spawnSparks(opt, 5);
+      });
+    });
+  }
 })();
