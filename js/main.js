@@ -156,6 +156,7 @@
 
   /* ---------- Start Free portal (magical popup) ---------- */
   const startFreeBtn = document.getElementById('startFreeBtn');
+  const navLearnBtn = document.getElementById('navLearnBtn');
   const specialProgramsBtn = document.getElementById('specialProgramsBtn');
   const portalScrim = document.getElementById('portalScrim');
   const portalClose = document.getElementById('portalClose');
@@ -200,9 +201,13 @@
     if (startFreeBtn) startFreeBtn.focus({ preventScroll: true });
   }
 
-  if (portalScrim && portalClose && (startFreeBtn || specialProgramsBtn)) {
+  if (portalScrim && portalClose && (startFreeBtn || specialProgramsBtn || navLearnBtn)) {
     if (startFreeBtn) startFreeBtn.addEventListener('click', openPortal);
     if (specialProgramsBtn) specialProgramsBtn.addEventListener('click', openPortal);
+    if (navLearnBtn) navLearnBtn.addEventListener('click', function () {
+      if (nav) nav.classList.remove('open');
+      openPortal();
+    });
     portalClose.addEventListener('click', closePortal);
     portalScrim.addEventListener('click', function (e) {
       if (e.target === portalScrim) closePortal();

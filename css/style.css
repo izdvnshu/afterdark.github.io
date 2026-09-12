@@ -113,6 +113,17 @@ a { color: inherit; text-decoration: none; }
   transition: color 0.15s;
 }
 .nav-links a:hover { color: var(--text); }
+.nav-learn {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.nav-learn:hover { color: var(--accent); }
 .nav-actions { display: flex; gap: 10px; }
 
 /* ---------- Buttons (square) ---------- */
