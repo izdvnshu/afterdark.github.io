@@ -52,7 +52,10 @@
       { cls: 't-ok',  text: '[ok] lesson 003 :: control flow     PASSED' },
       { cls: 't-out', text: '' },
       { cls: 't-out', text: '>>> vibe_level = "professional"' },
-      { cls: 't-ok',  text: '>>> Streak: 7 days — keep conquering the dark.' }
+      { cls: 't-ok',  text: '>>> Streak: 7 days — keep conquering the dark.' },
+      { cls: 't-out', text: '' },
+      { cls: 't-cmd', text: 'git clone https://github.com/izdvnshu/devshadows.github.io.git' },
+      { cls: 't-ok',  text: '[ok] full DEVSHADOWS website cloned — open index.html' }
     ];
     let line = 0;
     let ch = 0;
